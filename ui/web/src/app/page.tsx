@@ -12,58 +12,58 @@ import { CheckCircle2, Search, MountainIcon } from "lucide-react";
 
 export default function LandingPage() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <header className="px-4 lg:px-6 h-14 flex items-center">
-                <a className="flex items-center justify-center" href="#">
-                    <MountainIcon className="h-6 w-6" />
-                    <span className="ml-2 text-2xl font-bold">Nimbus</span>
-                </a>
-                <nav className="ml-auto flex gap-4 sm:gap-6">
-                    <a
-                        className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#features"
-                    >
-                        Features
+        <div className="flex flex-col min-h-screen justify-center items-center">
+            <header className="px-4 lg:px-6 h-14 flex items-center justify-center w-full">
+                <div className="container flex items-center justify-between">
+                    <a className="flex items-center justify-center" href="#">
+                        <MountainIcon className="h-6 w-6" />
+                        <span className="ml-2 text-2xl font-bold">Nimbus</span>
                     </a>
-                    <a
-                        className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#marketplace"
-                    >
-                        Marketplace
-                    </a>
-                    <a
-                        className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#pricing"
-                    >
-                        Pricing
-                    </a>
-                </nav>
+                    <nav className="flex gap-4 sm:gap-6">
+                        <a
+                            className="text-sm font-medium hover:underline underline-offset-4"
+                            href="#features"
+                        >
+                            Features
+                        </a>
+                        <a
+                            className="text-sm font-medium hover:underline underline-offset-4"
+                            href="#marketplace"
+                        >
+                            Marketplace
+                        </a>
+                        <a
+                            className="text-sm font-medium hover:underline underline-offset-4"
+                            href="#pricing"
+                        >
+                            Pricing
+                        </a>
+                    </nav>
+                </div>
             </header>
-            <main className="flex-1">
-                <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-                    <div className="container px-4 md:px-6">
-                        <div className="flex flex-col items-center space-y-4 text-center">
-                            <div className="space-y-2">
-                                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                                    Distribute Your Services with Ease
-                                </h1>
-                                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                                    Streamline your service distribution,
-                                    discover new SaaS offerings, and accept
-                                    payments. Grow your business with our
-                                    all-in-one SaaS marketplace platform.
-                                </p>
-                            </div>
-                            <div className="space-x-4">
-                                <Button>Get Started</Button>
-                                <Button variant="outline">Learn More</Button>
-                            </div>
+            <main className="flex-1 flex flex-col items-center justify-center w-full">
+                <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex justify-center">
+                    <div className="container px-4 md:px-6 flex flex-col items-center text-center">
+                        <div className="space-y-2">
+                            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                                Distribute Your Services with Ease
+                            </h1>
+                            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                                Streamline your service distribution, discover
+                                new SaaS offerings, and accept payments. Grow
+                                your business with our all-in-one SaaS
+                                marketplace platform.
+                            </p>
+                        </div>
+                        <div className="space-x-4 mt-4">
+                            <Button>Get Started</Button>
+                            <Button variant="outline">Learn More</Button>
                         </div>
                     </div>
                 </section>
                 <section
                     id="features"
-                    className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+                    className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 flex justify-center"
                 >
                     <div className="container px-4 md:px-6">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
@@ -102,12 +102,19 @@ export default function LandingPage() {
                                         "Get help anytime with our round-the-clock customer support.",
                                 },
                             ].map((feature, index) => (
-                                <Card key={index}>
+                                <Card
+                                    key={index}
+                                    className="w-full max-w-sm mx-auto"
+                                >
                                     <CardHeader>
-                                        <CardTitle>{feature.title}</CardTitle>
+                                        <CardTitle className="text-center">
+                                            {feature.title}
+                                        </CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <p>{feature.description}</p>
+                                        <p className="text-center">
+                                            {feature.description}
+                                        </p>
                                     </CardContent>
                                 </Card>
                             ))}
@@ -116,14 +123,14 @@ export default function LandingPage() {
                 </section>
                 <section
                     id="marketplace"
-                    className="w-full py-12 md:py-24 lg:py-32"
+                    className="w-full py-12 md:py-24 lg:py-32 flex justify-center"
                 >
-                    <div className="container px-4 md:px-6">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
+                    <div className="container px-4 md:px-6 text-center">
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-12">
                             Discover SaaS Solutions
                         </h2>
                         <div className="max-w-xl mx-auto mb-10">
-                            <div className="flex w-full max-w-sm items-center space-x-2">
+                            <div className="flex w-full max-w-sm items-center space-x-2 mx-auto">
                                 <Input
                                     type="text"
                                     placeholder="Search for SaaS solutions..."
@@ -167,27 +174,30 @@ export default function LandingPage() {
                                     price: "$69/mo",
                                 },
                             ].map((saas, index) => (
-                                <Card key={index}>
+                                <Card
+                                    key={index}
+                                    className="w-full max-w-sm mx-auto"
+                                >
                                     <CardHeader>
-                                        <CardTitle>{saas.name}</CardTitle>
-                                        <CardDescription>
+                                        <CardTitle className="text-center">
+                                            {saas.name}
+                                        </CardTitle>
+                                        <CardDescription className="text-center">
                                             {saas.category}
                                         </CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-2xl font-bold">
+                                        <p className="text-2xl font-bold text-center">
                                             {saas.price}
                                         </p>
                                     </CardContent>
-                                    <CardFooter>
-                                        <Button className="w-full">
-                                            Learn More
-                                        </Button>
+                                    <CardFooter className="flex justify-center">
+                                        <Button>Learn More</Button>
                                     </CardFooter>
                                 </Card>
                             ))}
                         </div>
-                        <div className="mt-10 text-center">
+                        <div className="mt-10">
                             <Button variant="outline" size="lg">
                                 Explore All SaaS Solutions
                             </Button>
@@ -196,7 +206,7 @@ export default function LandingPage() {
                 </section>
                 <section
                     id="pricing"
-                    className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+                    className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 flex justify-center"
                 >
                     <div className="container px-4 md:px-6">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
@@ -236,13 +246,15 @@ export default function LandingPage() {
                             ].map((plan, index) => (
                                 <Card
                                     key={index}
-                                    className={
+                                    className={`w-full max-w-sm mx-auto ${
                                         index === 1 ? "border-primary" : ""
-                                    }
+                                    }`}
                                 >
                                     <CardHeader>
-                                        <CardTitle>{plan.name}</CardTitle>
-                                        <CardDescription>
+                                        <CardTitle className="text-center">
+                                            {plan.name}
+                                        </CardTitle>
+                                        <CardDescription className="text-center">
                                             <span className="text-3xl font-bold">
                                                 {plan.price}
                                             </span>
@@ -254,11 +266,11 @@ export default function LandingPage() {
                                         </CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <ul className="space-y-2">
+                                        <ul className="space-y-2 text-center">
                                             {plan.features.map((feature, i) => (
                                                 <li
                                                     key={i}
-                                                    className="flex items-center"
+                                                    className="flex items-center justify-center"
                                                 >
                                                     <CheckCircle2 className="mr-2 h-4 w-4 text-primary" />
                                                     {feature}
@@ -266,8 +278,8 @@ export default function LandingPage() {
                                             ))}
                                         </ul>
                                     </CardContent>
-                                    <CardFooter>
-                                        <Button className="w-full">
+                                    <CardFooter className="flex justify-center">
+                                        <Button>
                                             {plan.price === "Custom"
                                                 ? "Contact Sales"
                                                 : "Get Started"}
@@ -278,48 +290,7 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </section>
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-                    <div className="container px-4 md:px-6">
-                        <div className="flex flex-col items-center space-y-4 text-center">
-                            <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                                    Ready to Get Started?
-                                </h2>
-                                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                                    Join thousands of companies already using
-                                    SaaSify to grow their business and discover
-                                    new SaaS solutions.
-                                </p>
-                            </div>
-                            <div className="space-x-4">
-                                <Button size="lg">Sign Up Now</Button>
-                                <Button size="lg" variant="outline">
-                                    Contact Sales
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </main>
-            <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                    © 2024 Nimbus. All rights reserved.
-                </p>
-                <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-                    <a
-                        className="text-xs hover:underline underline-offset-4"
-                        href="#"
-                    >
-                        Terms of Service
-                    </a>
-                    <a
-                        className="text-xs hover:underline underline-offset-4"
-                        href="#"
-                    >
-                        Privacy
-                    </a>
-                </nav>
-            </footer>
         </div>
     );
 }
