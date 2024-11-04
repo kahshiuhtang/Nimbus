@@ -58,7 +58,7 @@ const sellingServices: NmbsService[] = [
 
 export default function HomeDashboard() {
     const [activeTab, setActiveTab] = useState("bought");
-
+    if(!activeTab) activeTab;
     return (
         <div>
             <Navbar />
