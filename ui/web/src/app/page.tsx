@@ -8,7 +8,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { CheckCircle2, Star, Search, MountainIcon } from "lucide-react";
+import { CheckCircle2, Search, MountainIcon } from "lucide-react";
 
 export default function LandingPage() {
     return (
