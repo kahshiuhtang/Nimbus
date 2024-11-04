@@ -58,7 +58,7 @@ const sellingServices: NmbsService[] = [
 
 export default function HomeDashboard() {
     const [activeTab, setActiveTab] = useState("bought");
-    if(!activeTab) activeTab;
+    if (!activeTab) activeTab;
     return (
         <div>
             <Navbar />
@@ -77,14 +77,14 @@ export default function HomeDashboard() {
                             className="flex items-center justify-center"
                         >
                             <ShoppingCart className="w-4 h-4 mr-2" />
-                            Services You've Bought
+                            Purchased Services
                         </TabsTrigger>
                         <TabsTrigger
                             value="selling"
                             className="flex items-center justify-center"
                         >
                             <Package className="w-4 h-4 mr-2" />
-                            Services You're Selling
+                            Services For Sale
                         </TabsTrigger>
                     </TabsList>
                     <TabsContent value="bought">

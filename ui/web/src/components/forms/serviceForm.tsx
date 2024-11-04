@@ -357,7 +357,7 @@ export default function ServiceForm() {
                             <FileText className="h-4 w-4" />
                             <AlertTitle>File Preview</AlertTitle>
                             <AlertDescription>
-                                Configuration file "{file.name}" selected. Type:{" "}
+                                Configuration file {file.name} selected. Type:{" "}
                                 {configType.charAt(0).toUpperCase() +
                                     configType.slice(1)}
                             </AlertDescription>
